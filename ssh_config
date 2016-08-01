@@ -1,0 +1,4 @@
+StrictHostKeyChecking no
+Host bitbucket.org
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/id_rsa
