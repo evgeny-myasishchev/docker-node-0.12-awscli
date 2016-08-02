@@ -1,6 +1,6 @@
 # docker-node-0.12-awscli
 
-Docker image with node 0.12, aws cli and some helper scripts. Useful as a bitbucket pipes image to build node 0.12 repositories with some secrets stored on AWS S3.
+Docker image with node 0.12, aws cli and some helper scripts. Useful as a bitbucket pipes image to build node 0.12 codebases with some secrets stored on AWS S3.
 
 ## Containers
 
@@ -39,4 +39,18 @@ Put more vars into the **container.env** if needed.
 Run the image
 ```
 docker run --env-file=container.env -it --rm node-012-awscli bash
+```
+
+## Testing image built by docker hub
+
+Pull the image
+```
+docker pull evgenymyasishchev/docker-node-0.12-awscli
+```
+
+Have env file ready as explained above.
+
+Run the image
+```
+docker run --env-file=container.env -it --rm  evgenymyasishchev/docker-node-0.12-awscli bash
 ```
