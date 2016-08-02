@@ -1,6 +1,6 @@
 # docker-node-0.12-awscli
 
-Docker image with node 0.12, aws cli and some helper scripts. Useful as a pipes image to build node 0.12 repositories with some secrets stored on AWS.
+Docker image with node 0.12, aws cli and some helper scripts. Useful as a bitbucket pipes image to build node 0.12 repositories with some secrets stored on AWS S3.
 
 ## Containers
 
