@@ -8,6 +8,7 @@ Following ENV needs to be set when creating container:
 
 * AWS_ACCESS_KEY_ID
 * AWS_SECRET_ACCESS_KEY
+* AWS_DEFAULT_REGION
 
 ## Tools
 
@@ -29,6 +30,7 @@ To run the image first create env file with required env vars, at least:
 ```
 echo AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID >> container.env
 echo AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY >> container.env
+echo AWS_DEFAULT_REGION=eu-west-1 >> container.env
 ```
 Assuming AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are set in your current shell.
 

@@ -7,7 +7,7 @@ CMD=`basename $0`
 TMPFILE=`mktemp /tmp/${CMD}.XXXXXX` || exit 1
 
 echo "Copying from S3 $1 to ${TMPFILE}"
-aws s3 cp --quiet $1 ${TMPFILE}
+aws s3 cp $1 ${TMPFILE}
 
 echo "Decrypting ${TMPFILE} to $2"
 base64 --decode ${TMPFILE} > ${TMPFILE}.plain
