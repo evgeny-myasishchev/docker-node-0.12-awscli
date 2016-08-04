@@ -18,14 +18,14 @@ Download and decrypt KMS encrypted file from S3:
 bin/aws-s3-kms-decrypt.sh s3://encrypted-secrets/secret-key1 ./secret-key-1
 ```
 
-## Testing image locally
+## Testing container locally
 
 Build the image
 ```
 docker build -t node-012-awscli:latest .
 ```
 
-To run the image first create env file with required env vars, at least:
+To run the container first create env file with required env vars, at least:
 
 ```
 echo AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID >> container.env
@@ -36,12 +36,12 @@ Assuming AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are set in your current she
 
 Put more vars into the **container.env** if needed.
 
-Run the image
+Run the container
 ```
 docker run --env-file=container.env -it --rm node-012-awscli bash
 ```
 
-## Testing image built by docker hub
+## Testing container built by docker hub
 
 Pull the image
 ```
@@ -50,7 +50,7 @@ docker pull evgenymyasishchev/docker-node-0.12-awscli
 
 Have env file ready as explained above.
 
-Run the image
+Run the container
 ```
 docker run --env-file=container.env -it --rm  evgenymyasishchev/docker-node-0.12-awscli bash
 ```
